@@ -1,0 +1,31 @@
+# Intellij Idea project files
+.idea
+*.iml
+*.ipr
+*.iws
+
+# gradle config
+.gradle
+
+# project binaries
+build
+out
+classes
+target
+
+# sonar
+sonar-project.properties
+.sonar
+
+# mac os x
+.DS_Store
+
+# netbeans
+.nb-gradle
+
+/config
+/src/main/resources/build
+node_modules
+
+# private application profile (only for developers, shouldn't be in repo)
+application-private.yml
