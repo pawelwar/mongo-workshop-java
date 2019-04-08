@@ -74,9 +74,9 @@ public class DriverRepository {
 
     /**
      * Get drivers
-     * - older than 80 years old
-     * - sorted by age
+     * - older than specified age (age parameter)
      * - with pagination (skip and limit parameter)
+     * - sorted by age descending
      */
     public List<Driver> getOlderThan(Integer age, Integer skip, Integer limit) {
         Criteria ageGreaterThanCriteria = Criteria.where(Driver.AGE_FIELD).gt(age);
