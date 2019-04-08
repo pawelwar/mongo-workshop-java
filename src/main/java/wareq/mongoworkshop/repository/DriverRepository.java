@@ -66,9 +66,9 @@ public class DriverRepository {
 
     /**
      * Get drivers
-     * - older than 80 years old
-     * - sorted by age
+     * - older than specified age (age parameter)
      * - with pagination (skip and limit parameter)
+     * - sorted by age descending
      */
     public List<Driver> getOlderThan(Integer age, Integer skip, Integer limit) {
         // TODO you need to create proper criteria and pass it to Query object
