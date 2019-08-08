@@ -30,6 +30,11 @@ public class Driver {
     @Field(LAST_NAME_FIELD)
     private String lastName;
 
+    /**
+     * Right now this field is immutable.
+     *
+     * TODO you would like to modify this property by adding setPoints(...) or increasePoints(...) method.
+     */
     @Indexed(background = true)
     @Field(POINTS_FIELD)
     private Integer points;

@@ -104,7 +104,7 @@ public class DriverRepository {
     public Driver increasePoints(String driverId, int numberOfPointsToAdd) {
         Driver driver = mongoTemplate.findById(driverId, Driver.class);
 
-        // TODO 1: increase points
+        // TODO 1: increase points in driver object (you need to modify Driver class)
 
         // TODO 2: and save driver to database
 
