@@ -130,6 +130,14 @@ class DriverEndpointTest extends Specification {
         driverAfterChange.points == REGULAR_DRIVER.points + 1
     }
 
+    def 'should not increase number of points when driver does not exist'() {
+        when:
+        Driver driverAfterChange = getSingleDriver("/commands/increase-point/driver-that-not-exists")
+
+        then:
+        driverAfterChange == null
+    }
+    
     def 'all drivers at chosen age should be one year older'() {
         given:
         ensureDriversExist(REGULAR_DRIVER, STANISLAW_OLDEST_DRIVER)
