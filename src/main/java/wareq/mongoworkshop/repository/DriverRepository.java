@@ -72,12 +72,12 @@ public class DriverRepository {
 
     /**
      * Get drivers
-     * - older than specified age (age parameter)
+     * - OLDER than specified age (minimalAge parameter)
      * - with pagination (skip and limit parameter)
      * - sorted by age descending
      */
-    public List<Driver> getOlderThan(Integer age, Integer skip, Integer limit) {
-        Criteria ageGreaterThanCriteria = Criteria.where(Driver.AGE_FIELD).gt(age);
+    public List<Driver> getOlderThan(Integer minimalAge, Integer skip, Integer limit) {
+        Criteria ageGreaterThanCriteria = Criteria.where(Driver.AGE_FIELD).gt(minimalAge);
         Sort oldestFirst = new Sort(Sort.Direction.DESC, Driver.AGE_FIELD);
 
         return mongoTemplate.find(
