@@ -66,11 +66,11 @@ public class DriverRepository {
 
     /**
      * Get drivers
-     * - older than specified age (age parameter)
+     * - OLDER than specified age (minimalAge parameter)
      * - with pagination (skip and limit parameter)
      * - sorted by age descending
      */
-    public List<Driver> getOlderThan(Integer age, Integer skip, Integer limit) {
+    public List<Driver> getOlderThan(Integer minimalAge, Integer skip, Integer limit) {
         // TODO you need to create proper criteria and pass it to Query object
         // TODO don't forget to sort, skip and limit result
         return mongoTemplate.find(new Query(), Driver.class);
