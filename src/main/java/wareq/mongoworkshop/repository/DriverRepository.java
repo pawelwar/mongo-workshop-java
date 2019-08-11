@@ -92,9 +92,7 @@ public class DriverRepository {
      * Add new driver to database
      */
     public Driver add(Driver driver) {
-
-        // TODO: save new driver to database via save(...) method
-
+        mongoTemplate.save(driver);
         return driver;
     }
 
@@ -108,9 +106,6 @@ public class DriverRepository {
 
         // TODO 2: and save driver to database
 
-        if (driver != null) {
-            mongoTemplate.save(driver);
-        }
         return driver;
     }
 
